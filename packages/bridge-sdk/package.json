@@ -1,0 +1,25 @@
+{
+	"name": "@e2e-test/bridge-sdk",
+	"type": "module",
+	"dependencies": {
+		"@acala-network/chopsticks": "0.12.2",
+		"@acala-network/chopsticks-testing": "0.12.2",
+		"@acala-network/sdk": "4.1.9-13",
+		"@acala-network/sdk-core": "4.1.9-13",
+		"@e2e-test/shared": "workspace:*",
+		"@polkadot/api": "11.3.1",
+		"@polkawallet/bridge": "0.1.7-4",
+		"@swc/core": "^1.6.1",
+		"axios": "^1.7.2",
+		"dotenv": "^16.4.5",
+		"lodash": "^4.17.21",
+		"typescript": "^5.4.5"
+	},
+	"resolutions": {
+		"@acala-network/chopsticks": "0.12.2",
+		"@acala-network/chopsticks-testing": "0.12.2",
+		"@acala-network/sdk": "4.1.9-13",
+		"@acala-network/sdk-core": "4.1.9-13",
+		"@polkawallet/bridge": "0.1.7-4"
+	}
+}

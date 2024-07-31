@@ -1,5 +1,4 @@
-import { defaultAccount } from '@e2e-test/shared'
-
+import { defaultAccounts } from '../defaultAccounts.js'
 import { defineChain } from '../defineChain.js'
 
 const custom = {
@@ -13,10 +12,10 @@ const custom = {
 
 const getInitStorages = (config: typeof custom.centrifuge | typeof custom.altair) => ({
   System: {
-    account: [[[defaultAccount.alice.address], { providers: 1, data: { free: '1000000000000000' } }]],
+    account: [[[defaultAccounts.alice.address], { providers: 1, data: { free: '1000000000000000' } }]],
   },
   OrmlTokens: {
-    accounts: [[[defaultAccount.alice.address, config.acalaUsd], { balance: 10 * 1e12 }]],
+    accounts: [[[defaultAccounts.alice.address, config.acalaUsd], { balance: 10 * 1e12 }]],
   },
 })
 

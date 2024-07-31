@@ -1,5 +1,4 @@
-import { defaultAccount } from '@e2e-test/shared'
-
+import { defaultAccounts } from '../defaultAccounts.js'
 import { defineChain } from '../defineChain.js'
 
 const custom = {
@@ -13,10 +12,10 @@ const custom = {
 
 const getInitStorages = (config: typeof custom.bifrostPolkadot | typeof custom.bifrost) => ({
   System: {
-    account: [[[defaultAccount.alice.address], { providers: 1, data: { free: '1000000000000000' } }]],
+    account: [[[defaultAccounts.alice.address], { providers: 1, data: { free: '1000000000000000' } }]],
   },
   Tokens: {
-    account: [[[defaultAccount.alice.address, config.relayToken], { balance: 10 * 1e12 }]],
+    account: [[[defaultAccounts.alice.address, config.relayToken], { balance: 10 * 1e12 }]],
   },
 })
 

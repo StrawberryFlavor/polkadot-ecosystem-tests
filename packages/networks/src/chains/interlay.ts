@@ -1,5 +1,4 @@
-import { defaultAccount } from '@e2e-test/shared'
-
+import { defaultAccounts } from '../defaultAccounts.js'
 import { defineChain } from '../defineChain.js'
 
 const custom = {
@@ -17,13 +16,13 @@ const custom = {
 
 const getInitStorages = (config: typeof custom.interlay | typeof custom.kintsugi) => ({
   System: {
-    account: [[[defaultAccount.alice.address], { providers: 1, data: { free: '1000000000000000' } }]],
+    account: [[[defaultAccounts.alice.address], { providers: 1, data: { free: '1000000000000000' } }]],
   },
   Tokens: {
     Accounts: [
-      [[defaultAccount.alice.address, { ForeignAsset: config.LiquidToken }], { free: 100 * 1e12 }],
-      [[defaultAccount.alice.address, { Token: config.native }], { free: 1000 * 1e12 }],
-      [[defaultAccount.alice.address, { Token: config.btc }], { free: 3 * 1e8 }],
+      [[defaultAccounts.alice.address, { ForeignAsset: config.LiquidToken }], { free: 100 * 1e12 }],
+      [[defaultAccounts.alice.address, { Token: config.native }], { free: 1000 * 1e12 }],
+      [[defaultAccounts.alice.address, { Token: config.btc }], { free: 3 * 1e8 }],
     ],
   },
 })

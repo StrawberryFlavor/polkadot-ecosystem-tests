@@ -1,5 +1,4 @@
-import { defaultAccount } from '@e2e-test/shared'
-
+import { defaultAccounts } from '../defaultAccounts.js'
 import { defineChain } from '../defineChain.js'
 
 const custom = {
@@ -13,10 +12,10 @@ const custom = {
 
 const getInitStorages = (config: typeof custom.phala | typeof custom.khala) => ({
   System: {
-    account: [[[defaultAccount.alice.address], { providers: 1, data: { free: '1000000000000000' } }]],
+    account: [[[defaultAccounts.alice.address], { providers: 1, data: { free: '1000000000000000' } }]],
   },
   Assets: {
-    account: [[[config.aUSDToken, defaultAccount.alice.address], { balance: 100 * 1e12 }]],
+    account: [[[config.aUSDToken, defaultAccounts.alice.address], { balance: 100 * 1e12 }]],
   },
 })
 
